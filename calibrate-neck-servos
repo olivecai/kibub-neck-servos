@@ -1,0 +1,12 @@
+# hello programmaer/user before using this script u have to run 'export PYTHONPATH=$PWD/python-st3215:$PYTHONPATH' in bash
+
+from const import *
+from st3215 import ST3215
+
+s = ST3215(NECK_SERVO_DEVICE)
+res= s.DefineMiddle(YAW_ID)
+print(f"DefineMiddle {YAW_ID} ret: {res}")
+res= s.DefineMiddle(PITCH_ID)
+print(f"DefineMiddle {PITCH_ID} ret: {res}")
+
+print("Performed DefineMiddle on both servos.")
